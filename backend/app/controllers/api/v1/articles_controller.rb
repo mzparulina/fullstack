@@ -25,7 +25,7 @@ class Api::V1::ArticlesController < ApplicationController
     )
 
     if @article.save
-      render json:article, status: 200
+      render json: @article, status: 200
     else
       render json: { error: "Error on creating article!"}
     end
@@ -51,6 +51,10 @@ class Api::V1::ArticlesController < ApplicationController
       article.destroy
       render json: "Article deleted successfully"
     end
+  end
+
+  def new
+    article = Article.new
   end
 
   private
