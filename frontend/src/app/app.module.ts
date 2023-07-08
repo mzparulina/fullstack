@@ -6,15 +6,13 @@ import { AppComponent } from './app.component';
 import { ListarticlesComponent } from './listarticles/listarticles.component';
 import { CreatearticleComponent } from './createarticle/createarticle.component';
 import { EditarticleComponent } from './editarticle/editarticle.component';
-import { ArticleComponent } from './services/article/article.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarticlesComponent,
     CreatearticleComponent,
-    EditarticleComponent,
-    ArticleComponent
+    EditarticleComponent
   ],
   imports: [
     BrowserModule,
