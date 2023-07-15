@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,12 @@ export class ArticleService {
     return this.http.get(this.url + '/api/v1/articles')
   }
 
-  addArticle() {
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  }
 
+  addArticle(data: any) {
+    return this.http.post( this.url + '/api/v1/articles', data, this.httpOptions);
   }
 
   findArticle() {
