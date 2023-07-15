@@ -22,7 +22,6 @@ export class ListarticlesComponent {
     this.articles = this.articleService.listArticle().subscribe(
       article => {
         this.articles = article
-        console.log(this.articles)
       }
     )
   }
