@@ -30,7 +30,7 @@ export class ArticleService {
 
   }
 
-  deleteArticle(id: number) {
+  deleteArticle(id: any) {
     return this.http.delete( this.url + '/api/v1/articles' + id);
   }
 }
