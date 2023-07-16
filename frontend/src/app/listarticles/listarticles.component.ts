@@ -26,4 +26,11 @@ export class ListarticlesComponent {
     )
   }
 
+  deleteArticle(id: any) {
+    this.articleService.deleteArticle(id).subscribe(
+      article => {
+        console.log("Article has been deleted")
+      }
+    )
+  }
 }
