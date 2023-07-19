@@ -1,6 +1,6 @@
 <div>
   <h1>Edit Article</h1>
-  <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+  <form *ngIf="articleForm" [formGroup]="articleForm" (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label for="title" class="form-label">Article Title</label>
       <input type="text" class="form-control" id="title" formControlName="title">
@@ -14,7 +14,7 @@
       <input type="text" class="form-control" id="author" formControlName="author">
     </div>
     <div class="mb-3">
-      <button type="submit" class="btn btn-primary">Create new Article</button>
+      <button type="submit" class="btn btn-primary">Update Article</button>
     </div>
   </form>
 </div>
